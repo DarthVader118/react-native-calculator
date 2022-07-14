@@ -5,28 +5,28 @@ import { useState } from 'react'
 const EquationSolver = () => {
   handlePress = (type, value) => {
 
-  if(type === "clear") {
- ;
-  }
+    if(type === "clear") {
 
-  if(type === "equal") {
-  }
-
-  if(operator === "+") {
-
-  }
-
-  if(operator === "/") {
-
-  }
-
-  if(operator === "-") {
-
-  }
-
-  if(operator === "*") {
     }
-   }
+
+    if(type === "equal") {
+    }
+
+    if(operator === "+") {
+
+    }
+
+    if(operator === "/") {
+
+    }
+
+    if(operator === "-") {
+
+    }
+
+    if(operator === "*") {
+
+    }
 
   }
   render() {
