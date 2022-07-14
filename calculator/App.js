@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import EquationSolver from "./componenets/EquationSolver";
+import { EquationSolver } from "./componenets/EquationSolver";
 
 
 export default function App() {
