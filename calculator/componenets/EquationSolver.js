@@ -29,8 +29,6 @@ const EquationSolver = () => {
     }
 
   }
-  render() {
-    return <Text>Hello, I am your cat!</Text>
-  }
+  return ( <Text>Hello, I am your cat!</Text> )
 
 }
