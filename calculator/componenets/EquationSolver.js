@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { useState } from 'react'
 
-const EquationSolver = () => {
+export const EquationSolver = () => {
   handlePress = (type, value) => {
 
     if(type === "clear") {
