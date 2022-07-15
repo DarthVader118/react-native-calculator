@@ -1,25 +1,20 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
-import { CalcButton } from "./Button"
+import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
 
-export const ButtonContainer = props => {
+export const CalcButton = props => {
+  
   return (
-    <View style={styles.buttonContainer}>
-      <CalcButton type="number" value="1" onPress={props.onPress}/>
-      <CalcButton type="number" value="2" onPress={props.onPress}/>
-      <CalcButton type="number" value="3" onPress={props.onPress}/>
-      <CalcButton type="number" value="4" onPress={props.onPress}/>
-      <CalcButton type="number" value="5" onPress={props.onPress}/>
-      <CalcButton type="number" value="6" onPress={props.onPress}/>
-    </View>
+  <TouchableOpacity onPress={() => props.onPress(props.type, props.value)} style={styles.calcButton}>
+    <Text>{props.value}</Text>
+  </TouchableOpacity>
   )
 }
 
 const styles = StyleSheet.create({
-  buttonContainer : {
-    flex: 3,
-    flexDirection: "row",
-    
+  calcButton : {
+    width: 50,
+    height: 50,
+    backgroundColor: "white",
+
   },
 });
-
