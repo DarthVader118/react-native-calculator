@@ -14,10 +14,13 @@ export const EquationSolver = () => {
       setCurrVal(`${currVal}${value}`)
     }
     if(type==='operator') {
-
+      setOperator(value)
+      setCurrVal(prev=>`${prev}${operator}`)
     }
 
     if(type === "clear") {
+      setCurrVal('0')
+      setOperator(null)
     }
     if(type === "equal") {
       final=eval(currVal)
