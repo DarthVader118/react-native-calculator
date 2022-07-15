@@ -1,41 +1,40 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
 import { useState } from 'react'
+import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-export const EquationSolver = () => {
+
+const EquationSolver = () => {
   const [ currVal, setCurrVal ] = useState("0");
   const [ operator, setOperator ] = useState(null);
-  const [ prevVal, setPrevVal ] = useState(null);
-  
   handlePress = (type, value) => {
-    if(type==='number') {
+    if(type === "number") {
       setCurrVal(`${currVal}${value}`)
     }
-    
+    if(type==='operator') {
+
+    }
+
     if(type === "clear") {
-
     }
-
     if(type === "equal") {
-    }
-
-    if(operator === "+") {
+      if(operator === "+") {
 
     }
 
-    if(operator === "/") {
+      if(operator === "/") {
 
+      }
+
+      if(operator === "-") {
+
+      }
+
+      if(operator === "*") {
+      }
     }
-
-    if(operator === "-") {
-
-    }
-
-    if(operator === "*") {
-
-    }
-
   }
-  return ( <Text>Hello, I am your Calc!</Text> )
+
+    return <Text>Hello, bye</Text>
 
 }
+
