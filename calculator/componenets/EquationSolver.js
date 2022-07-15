@@ -6,6 +6,7 @@ import { EquationDisplayer } from "./EquationDisplayer"
 
 
 export const EquationSolver = () => {
+  let final
   const [ currVal, setCurrVal ] = useState("0");
   const [ operator, setOperator ] = useState(null);
   handlePress = (type, value) => {
@@ -19,7 +20,8 @@ export const EquationSolver = () => {
     if(type === "clear") {
     }
     if(type === "equal") {
-      if(operator === "+") {
+      final=eval(currVal)
+/*      if(operator === "+") {
 
     }
 
@@ -32,12 +34,13 @@ export const EquationSolver = () => {
       }
 
       if(operator === "*") {
-      }
+      }*/
     }
   }
 
     return (
       <>
+        <Text>{final}</Text>
         <EquationDisplayer equation="1+2+3+4+5+6"/>
         <ButtonContainer />
       </>
