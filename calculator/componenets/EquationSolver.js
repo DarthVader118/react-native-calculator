@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react'
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { ButtonContainer } from "./ButtonContainer";
+import { EquationDisplayer } from "./EquationDisplayer"
 
 
-const EquationSolver = () => {
+export const EquationSolver = () => {
   const [ currVal, setCurrVal ] = useState("0");
   const [ operator, setOperator ] = useState(null);
   handlePress = (type, value) => {
@@ -34,7 +36,12 @@ const EquationSolver = () => {
     }
   }
 
-    return <Text>Hello, bye</Text>
+    return (
+      <>
+        <EquationDisplayer equation="1+2+3+4+5+6"/>
+        <ButtonContainer />
+      </>
+   )
 
 }
 
