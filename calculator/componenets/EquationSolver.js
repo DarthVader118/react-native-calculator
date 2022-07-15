@@ -7,9 +7,10 @@ import { EquationDisplayer } from "./EquationDisplayer"
 
 export const EquationSolver = () => {
   let final
-  const [ currVal, setCurrVal ] = useState("0");
+  const [ currVal, setCurrVal ] = useState("");
   const [ operator, setOperator ] = useState(null);
-  handlePress = (type, value) => {
+  const handlePress = (type, value) => {
+    console.log(type, value)
     if(type === "number") {
       setCurrVal(`${currVal}${value}`)
     }
@@ -44,8 +45,8 @@ export const EquationSolver = () => {
     return (
       <>
         <Text>{final}</Text>
-        <EquationDisplayer equation="1+2+3+4+5+6"/>
-        <ButtonContainer />
+        <EquationDisplayer equation={currVal}/>
+        <ButtonContainer onPress={handlePress}/>
       </>
    )
 
