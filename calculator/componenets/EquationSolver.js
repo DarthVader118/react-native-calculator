@@ -10,7 +10,6 @@ export const EquationSolver = () => {
   const [ currVal, setCurrVal ] = useState("");
   const [ operator, setOperator ] = useState(null);
   const handlePress = (type, value) => {
-    console.log(type, value)
     if(type === "number") {
       setCurrVal(`${currVal}${value}`)
     }
@@ -25,20 +24,6 @@ export const EquationSolver = () => {
     }
     if(type === "equal") {
       setCurrVal(eval(currVal))
-/*      if(operator === "+") {
-
-    }
-
-      if(operator === "/") {
-
-      }
-
-      if(operator === "-") {
-
-      }
-
-      if(operator === "*") {
-      }*/
     }
   }
 
