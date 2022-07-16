@@ -20,11 +20,11 @@ export const EquationSolver = () => {
     }
 
     if(type === "clear") {
-      setCurrVal('0')
+      setCurrVal('')
       setOperator(null)
     }
     if(type === "equal") {
-      final=eval(currVal)
+      setCurrVal(eval(currVal))
 /*      if(operator === "+") {
 
     }
@@ -44,7 +44,6 @@ export const EquationSolver = () => {
 
     return (
       <>
-        <Text>{final}</Text>
         <EquationDisplayer equation={currVal}/>
         <ButtonContainer onPress={handlePress}/>
       </>
