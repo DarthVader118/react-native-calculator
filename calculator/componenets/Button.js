@@ -5,16 +5,24 @@ export const CalcButton = props => {
   
   return (
   <TouchableOpacity onPress={() => props.onPress(props.type, props.value)} style={styles.calcButton}>
-    <Text>{props.value}</Text>
+    <Text style={styles.buttonText}>{props.value}</Text>
   </TouchableOpacity>
   )
 }
 
 const styles = StyleSheet.create({
   calcButton : {
-    width: 50,
-    height: 50,
-    backgroundColor: "white",
-
+    width: "25%",
+    height: "25%",
+    backgroundColor: "lightgray",
+    justifyContent: "center",
+    alignItems: "center",
+    borderStyle: "solid",
+    borderWidth: 1,
   },
+   
+   buttonText: {
+     fontSize: 30,
+
+   },
 });
