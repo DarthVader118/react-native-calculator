@@ -15,7 +15,7 @@ export const EquationSolver = () => {
     }
     if(type==='operator') {
       setOperator(value)
-      setCurrVal(prev=>`${prev}${operator}`)
+      setCurrVal(prev=>`${prev}${value}`)
     }
 
     if(type === "clear") {
