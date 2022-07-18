@@ -23,7 +23,7 @@ export const EquationSolver = () => {
       setOperator(null)
     }
     if(type === "equal") {
-      const nameRegex = /.?[1-9]+([+\-\*\/].?[1-9]+)*/g;
+      const nameRegex = /[0-9]+([+\-\*\/][0-9]+)*/g;
       if(currVal !== null) {
         if (nameRegex.test(currVal)) {
           setCurrVal(eval(currVal.match(nameRegex)[0]))
